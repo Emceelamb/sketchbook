@@ -27,7 +27,7 @@ public void setup(){
 }
 float rot = 0.f;
 public void draw(){
-    background(0xff476a6f);
+    background(230);
     // pushMatrix();
     // translate(width/2,height/2,-500);
     // rectMode(CENTER);
@@ -68,10 +68,10 @@ class Spinner{
         pushMatrix();
         rotateY(y);
         rotateZ(z);
-        // noFill();
+        noFill();
         // strokeWeight(5);
-        stroke(0xff476a6f);
-        fill(0xff7eb09b);
+        stroke(33);
+        // fill(#7eb09b);
         rectMode(CENTER);
         rect(0, 0, rad, rad);
         popMatrix();
