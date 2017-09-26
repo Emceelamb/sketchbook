@@ -55,45 +55,39 @@ void captureEvent(Capture c){
 void TexturedCube(PGraphics pg) {
   beginShape(QUADS);
   texture(pg);
-
-  vertex(-1, -1,  1, 0, 0);
-  vertex( 1, -1,  1, 1, 0);
-  vertex( 1,  1,  1, 1, 1);
-  vertex(-1,  1,  1, 0, 1);
-
-  // -Z "back" face
-  vertex( 1, -1, -1, 0, 0);
-  vertex(-1, -1, -1, 1, 0);
-  vertex(-1,  1, -1, 1, 1);
-  vertex( 1,  1, -1, 0, 1);
-
-  // +Y "bottom" face
-  vertex(-1,  1,  1, 0, 0);
-  vertex( 1,  1,  1, 1, 0);
-  vertex( 1,  1, -1, 1, 1);
-  vertex(-1,  1, -1, 0, 1);
-
-  // -Y "top" face
-  vertex(-1, -1, -1, 0, 0);
-  vertex( 1, -1, -1, 1, 0);
-  vertex( 1, -1,  1, 1, 1);
-  vertex(-1, -1,  1, 0, 1);
-
-  // +X "right" face
-  vertex( 1, -1,  1, 0, 0);
-  vertex( 1, -1, -1, 1, 0);
-  vertex( 1,  1, -1, 1, 1);
-  vertex( 1,  1,  1, 0, 1);
-
-  // -X "left" face
-  vertex(-1, -1, -1, 0, 0);
-  vertex(-1, -1,  1, 1, 0);
-  vertex(-1,  1,  1, 1, 1);
-  vertex(-1,  1, -1, 0, 1);
-
+  vertex(-1, -1,  1, 0 );
+  vertex(-1, -1,  1, 0 );
+  vertex( 1, -1,  1, 1 );
+  vertex( 1,  1,  1, 1 );
+  vertex(-1,  1,  1, 0 );
+  // -Z "back" fa
+  vertex( 1, -1, -1, 0 );
+  vertex(-1, -1, -1, 1 );
+  vertex(-1,  1, -1, 1 );
+  vertex( 1,  1, -1, 0 );
+  // +Y "bottom" fa
+  vertex(-1,  1,  1, 0 );
+  vertex( 1,  1,  1, 1 );
+  vertex( 1,  1, -1, 1 );
+  vertex(-1,  1, -1, 0 );
+  // -Y "top" fa
+  vertex(-1, -1, -1, 0 );
+  vertex( 1, -1, -1, 1 );
+  vertex( 1, -1,  1, 1 );
+  vertex(-1, -1,  1, 0 );
+  // +X "right" fa
+  vertex( 1, -1,  1, 0 );
+  vertex( 1, -1, -1, 1 );
+  vertex( 1,  1, -1, 1 );
+  vertex( 1,  1,  1, 0 );
+  // -X "left" fa
+  vertex(-1, -1, -1, 0 );
+  vertex(-1, -1,  1, 1 );
+  vertex(-1,  1,  1, 1 );
+  vertex(-1,  1, -1, 0 );
   endShape();
-}
 
+}
 // void mouseDragged() {
 //   float rate = 0.01;
 //   rotx += (pmouseY-mouseY) * rate;
