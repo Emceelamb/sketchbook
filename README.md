@@ -2,4 +2,4 @@
 
 A collection of creative coding experiments.
 
-View results at (markofthelam.com)[https://markofthelam.com].
+View results at https://markofthelam.com.
