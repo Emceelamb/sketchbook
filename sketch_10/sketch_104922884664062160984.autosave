@@ -1,0 +1,21 @@
+import shiffman.box2d.*;
+
+Particle[] particles = new Particle[10];
+void setup() {
+  size(640, 640);
+  background(230);
+  for (int i = 0; i <particles.length; i++) {
+    particles[i] = new Particle(new PVector(random(width), random(height)), new PVector(random(5),random(5)),int(random(30,100)));
+  }
+}
+
+void draw() {
+  background(230);
+  
+  for (Particle p : particles) {
+    p.checkEdges();
+    p.collision();
+    p.update();
+    p.display();
+  }
+}
