@@ -5,6 +5,7 @@
 #include "SoundClass.h"
 #include "VideoClass.h"
 
+#include "ofxGui.h"
 class ofApp : public ofBaseApp{
 
 	public:
@@ -27,4 +28,14 @@ class ofApp : public ofBaseApp{
 	ImageClass img;
 	SoundClass sound;
 	VideoClass video;
+
+	ofxPanel gui;
+
+	ofxIntSlider intSlider;
+	ofxFloatSlider floatSlider;
+	ofxToggle toggle;
+	ofxButton button;
+
+	ofxIntSlider posX;
+	ofxIntSlider posY;
 };

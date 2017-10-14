@@ -4,6 +4,6 @@ void ImageClass::setup() {
 	img.load("heart.png");
 }
 
-void ImageClass::draw() {
-	img.draw(20, 20);
+void ImageClass::draw(int posX, int posY) {
+	img.draw(posX, posY);
 }

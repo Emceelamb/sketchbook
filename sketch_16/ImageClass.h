@@ -4,6 +4,6 @@
 class ImageClass {
 public:
 	void setup();
-	void draw();
+	void draw(int posX, int posY);
 	ofImage img;
 };
