@@ -21,13 +21,25 @@ function draw(){
     // p1.update();
     // p1.draw();
     // p2.draw();
+    // ps.push(new Particle(createVector(width/2,height/2)));
+    for (var i = ps.length; i < 10; i++) {
+        var p = new Particle(createVector(random(width),random(height)));
+        ps.push(p);
+    }
     for(var i = 0; i< ps.length; i++){
         ps[i].aforce(f);
         ps[i].update();
         ps[i].dead();
-        ps[i].draw();
-
+        ps[i].display();
+        if(ps[i].dead()){
+            ps.splice(i,1);
+        }
+        console.log(ps[i].lifespan);
     }
+    // if(ps.length<20){
+    //     ps.push(new Particle(width/2,height/2));
+    // }
+    console.log(ps.length+"!"   );
 }
 
 var Particle = function(position){
@@ -37,7 +49,7 @@ var Particle = function(position){
     this.grav = createVector(0,0);
     this.mass = random(10.0);
     this.lifespan = 255;
-    this.dead = true;
+    this.dead = false;
 
     this.aforce = function(force){
         this.force = force;
@@ -51,17 +63,21 @@ var Particle = function(position){
         this.lifespan-=5;
     }
     
-    this.draw = function(){
+    this.display = function(){
         fill(233,this.lifespan);
         ellipse(this.position.x,this.position.y, 40,40);
     }
 
+    // this.addPs = function(){
+    //     this.
+    // }
+
     this.dead = function(){
         if(this.lifespan<0){
             console.log("Death!");
-            ps.splice(10);
-            ps.push(new Particle(createVector(width/2,height/2)));
-            return false;
+            // ps.splice(1);
+            // ps.push(new Particle(createVector(width/2,height/2)));
+            return true;
         }
 
 
