@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <!-- <meta charset="UTF-8"> -->
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <style>
+        body {
+            margin: 0px;
+        }
+        .row{
+            height:8px;
+        }
+        .row div{
+            height:8px;
+            display:inline-block;
+            width:8px;
+            /* margin: 5px */
+
+        }
+
+        .row div.active{
+            background-color:rgb(122, 255, 182);
+        }
+
+        .row div.inactive{
+            background-color:#99CCFF;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="automaton">
+            <div class='row'></div>
+        </div>
+        <script src="automata.js"></script>
+        
+    </body>
+</html>
