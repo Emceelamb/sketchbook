@@ -40,14 +40,22 @@ function procRow(rowDiv, parentRowDiv){
         
         let x = setActiveIfMatchesRule
             .bind(null, target, leftSib, prevSelf, rightSib);
-        x([1, 1, 1], false);
-        x([1, 1, 0], true);
+        // x([1, 1, 1], false);
+        // x([1, 1, 0], true);
+        // x([1, 0, 1], false);
+        // x([1, 0, 0], false);
+        // x([0, 1, 1], true);
+        // x([0, 1, 0], false);
+        // x([0, 0, 1], false);
+        // x([0, 0, 0], true);
+        x([1, 1, 1], true);
+        x([1, 1, 0], false);
         x([1, 0, 1], false);
-        x([1, 0, 0], false);
-        x([0, 1, 1], true);
+        x([1, 0, 0], true);
+        x([0, 1, 1], false);
         x([0, 1, 0], false);
-        x([0, 0, 1], false);
-        x([0, 0, 0], true);
+        x([0, 0, 1], true);
+        x([0, 0, 0], false);
         
         // first rule
 
@@ -76,7 +84,7 @@ function procRow(rowDiv, parentRowDiv){
 }
 
 function state(cellDiv){
-    return cellDiv.classList.contains('active') ? 0: 1;
+    return cellDiv.classList.contains('active') ? 1: 0;
 }
 
 function setIsActive(cellDiv, isActive){
@@ -106,4 +114,4 @@ function setActiveIfMatchesRule(
     }
 }
 
-setInterval(dupRow, 100);
+setInterval(dupRow, 50);
