@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Magic 8 Ball</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <html>
+  <div class="container"> 
+    <div id="app">
+      <h1>{{ msg }}</h1>
+
+      <h2>{{selectedAnswer}}</h2>
+      <p>
+
+      <button v-on:click="todo(0)">Shake</button>
+
+    </div>
+    
+    <div id="app2">{{type}}
+            <button v-on:click="todo(0)">foo</button>
+</div>
+  </div>
+  
+  
+</html>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
