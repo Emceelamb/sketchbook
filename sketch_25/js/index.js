@@ -40,62 +40,36 @@ const app = new Vue({
       const index = Math.floor(Math.random() * this.answers.length);
       this.selectedAnswer = this.answers[index];
     },
-    todo: function(n){  
-      n
+    typeWriter: function(n) {
+      n;
       getDefaultData();
-      
+
       let index = Math.floor(Math.random() * this.answers.length);
       t = this.answers[index];
-   
-      if(n<t.length){
 
-      
-      this.intervalid1 = setInterval(function(){
-    this.selectedAnswer=t.substring(0, n + 1);
-    n++;
-        console.log (n, t.length);
-        if (n >t.length-1) {
-    clearInterval(this.intervalid1);
-  }
-    }.bind(this), 500);
-      } 
-}
-  }
-});
-
-var app2 = new Vue({
-  el:"#app2",
-  data:{
-    type:"",
-  },
-  methods:{
-    foo: function (number) {
-      var num = this.number;
-      num--;
-      this.foo(num);
-      console.log("bar");
-
-
-  },
-    todo: function(n){  
-      getDefaultData();
-      if(n<t.length){
-        
-      
-      this.intervalid1 = setInterval(function(){
-    this.type=t.substring(0, n + 1);
-    n++;
-        console.log (this.text);
-    }.bind(this), 1000);
+      // typewriter effect
+      if (n < t.length) {
+        this.intervalid1 = setInterval(
+          function() {
+            this.selectedAnswer = t.substring(0, n + 1);
+            n++;
+            console.log(n, t.length);
+            if (n > t.length - 1) {
+              clearInterval(this.intervalid1);
+            }
+          }.bind(this),
+          200
+        );
       }
-}
-}
+    }
+  }
 });
 
+// resets data
 
 function getDefaultData() {
-    return {
-      data:{
+  return {
+    data: {
       msg: "Look into my depths and you shall find your answer...",
 
       // Array of 8-Ball Answers
@@ -122,7 +96,6 @@ function getDefaultData() {
         "Very doubtful"
       ],
       selectedAnswer: ""
-
     }
-  }
+  };
 }
