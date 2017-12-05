@@ -1,5 +1,5 @@
 function preload(){
-    sound = loadSound('november.mp3');
+    sound = loadSound('okay.mp3');
 }
 
 function setup() {
