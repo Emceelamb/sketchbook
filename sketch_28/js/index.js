@@ -7,7 +7,7 @@ $.getJSON(dataurl, function(data){
   // var titles=[];  
   // console.log(data["articles"].length);
   for(var i = 0; i < data["articles"].length; i++){
-    headlines.push([data["articles"][i].title,data["articles"][i].author]);
+    headlines.push([data["articles"][i].title,data["articles"][i].author,data["articles"][i].url,data["articles"][i]["source"]["name"]]);
   }
   // console.log(titles, '!')
   // return titles;
@@ -23,14 +23,20 @@ const app = new Vue({
     randomNews: function(){
       const index = Math.floor(Math.random() * headlines.length);
       this.title=headlines[index][0];
-      this.author=headlines[index][1];
+      this.author= "- "+ headlines[index][1];
+      this.url=headlines[index][2];
+      this.source=headlines[index][3];
+      this.tweet="https://twitter.com/intent/tweet?text="+this.title+" --- "+this.url; 
     }
 
   },
   data:{
     message: headlines[0],
-    title: "",
+    title: "Click For The Latest Headlines...",
     author: "",
+    url: "",
+    source: "",
+    tweet: ""
     // message: title
   }
 })

@@ -2,8 +2,9 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>A Pen by  Mark Lam</title>
-  
+  <title>News Flipper</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="styles.css">
   
   
   
@@ -11,16 +12,32 @@
 </head>
 
 <body>
-  <div id="app">
-  <h1>{{title}}</h1><p>
+  <div class="centering">
 
-    - {{author}}
-  </p>
-  <button class="button-primary" v-on:click="randomNews">News</button>
-</div>
+    <div id="app" class="container" v-on:click="randomNews">
+      
+      <div class="app-container">
+        <h1 class="headline"><strong><a  v-bind:href="url">{{title}}</a></strong></h1><p>
+        <div class="info">
+
+          <h3 class="source"> {{source}}</h3><br>
+          <h5 class="author"> {{author}}</h5>
+        </div>
+      </p>
+      <a class="twitter-share-button"
+      v-bind:href="tweet">Tweet
+    </a>
+    </div>
+    
+  </div>
+  <div class="ack">Made withs <a href="https://newsapi.org/">NewsApi.</a></div>
+  </div>
+  
+  
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
-    <script  src="js/index.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script  src="js/index.js"></script>
+  
 </body>
 </html>
