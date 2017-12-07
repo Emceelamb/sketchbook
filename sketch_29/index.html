@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Local Weather</title>
 
     
 
@@ -16,19 +16,16 @@
 </head>
 <body>
     <div class="gif-bg">
-        <div class="container">
+    
+        <div v-on:click="tempFormat" id="app" class="container">
             
-            <div id="app">
-                <!-- {{ json }} -->
-                <!-- {{ coords }} -->
-                <!-- {{ hello }} -->
-                <!-- {{json}} -->
+            <div class="center">
+              
                 <h1>{{city}}, {{country}}</h1>
-                <h1>{{date}}</h1>
-                <h1>{{time}}</h1>
-                <h1>{{weather}}</h1>
-                <h1>{{temperature}}</h1>
-                <!-- <h1>{{country}}</h1> -->
+                <center><h3>{{date}}</h3></center>
+                <center><h3>{{time}}</h3></center>
+                <center><h3>{{weather}}</h3></center>
+                <center><h3>{{temperature}}</h3></center>
             </div>
         </div> 
        

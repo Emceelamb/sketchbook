@@ -6,7 +6,9 @@ navigator.geolocation.getCurrentPosition(function(position) {
         app.json = json;
         app.city = json.name;
         app.weather = json.weather[0].description.charAt(0).toUpperCase()+json.weather[0].description.slice(1);
-        app.temperature = json.main.temp;
+        app.celc = json.main.temp+'℃';
+        app.far = ((json.main.temp*9/5)+32)+'℉';
+        app.temperature = app.celc;
         console.log(app.city);
         
             $(function() {
@@ -39,6 +41,15 @@ var app = new Vue({
         this.updateTime();
     },
     methods: {
+        tempFormat: function(){
+            if(app.imperial){
+                app.temperature = app.celc;
+            } else {
+                app.temperature = app.far;
+            }
+            return app.imperial = !app.imperial;
+            
+        },
         updateTime: function updateTime(){
             $.getJSON('http://api.geonames.org/timezoneJSON?lat='+coords[0]+'&lng='+coords[1]+'&username=emceelamb', function(timeInfo){
                 var timeTemp=timeInfo.time.split(' ');
@@ -79,7 +90,7 @@ var app = new Vue({
                         date[1]='November';
                         break;
                     case '12':
-                        date[1]='November';
+                        date[1]='December';
                         break;
                 }
 
@@ -97,10 +108,13 @@ var app = new Vue({
         coords: coords,
         city: null,
         weather: null,
+        celc: null,
+        far: null,
         temperature: null,
         time: null,
         date: null,
-        country: null
+        country: null,
+        imperial: false
     }
 });
 

@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 body {
     margin: 0;
     padding: 0;
+    
+
+
+    font-family: 'Quicksand', sans-serif;
+    
+    
+    /* font-family: 'Merriweather', serif; */
+    
+    
   }
   .gif-bg {
     background:url('') no-repeat center center;	
@@ -9,7 +21,8 @@ body {
     min-height:100%; /* for mobile and tablets */
     background-size:cover;	
     padding: 25px;
-    position:absolute
+    position:absolute;
+    display:flex
   }
 
 #app{
@@ -17,4 +30,8 @@ body {
   color:white;
   padding:100px;
   border-radius:25px
+}
+
+.container{
+    margin:auto;
 }
