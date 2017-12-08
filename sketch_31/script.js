@@ -36,3 +36,12 @@ var app = new Vue({
         results: null
     }
 })
+
+// giphy 
+$(function() {
+    var xhr = $.get("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=universe");
+    xhr.done(function(data) { 
+      $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
+    });
+  });
+ 

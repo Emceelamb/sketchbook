@@ -15,13 +15,16 @@
     <title>Wikipedia</title>
 </head>
 <body>
+        <div class="gif-bg">
+            </div>  
     <div class="container">
 
         <div id="app">
-            {{hello}}
-            <form>
+            <a href="https://en.wikipedia.org/wiki/Special:Random"><img class="logo" src = "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@2x.png"></a>
+            <!-- <div class=searchba></div> --><br>
+            <form class="searchbar">
                 <input type="text" ref="my_input">
-                <button @click.prevent="getFormValues()">Search</button>
+                <button @click.prevent="getFormValues()" class="searchButton">Search</button>
               </form>
               <!-- 
               <div v-for="(value, key, index) in object">
