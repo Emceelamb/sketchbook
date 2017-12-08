@@ -12,8 +12,8 @@ navigator.geolocation.getCurrentPosition(function(position) {
         console.log(app.city);
         
             $(function() {
-                var xhr = $.get("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+app.weather);
-                console.log("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+app.weather,'!');
+                var xhr = $.get("https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+app.weather);
+                console.log("https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+app.weather,'!');
                 xhr.done(function(data) { 
                   $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
                 });
@@ -126,7 +126,7 @@ var app = new Vue({
 // giphy 
 
 $(function() {
-    var xhr = $.get("http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+app.weather);
+    var xhr = $.get("https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="+app.weather);
     console.log(xhr,'!');
     xhr.done(function(data) { 
       $('.gif-bg').css('background-image', 'url(' + data.data.image_url + ')');
