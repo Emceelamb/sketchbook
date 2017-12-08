@@ -11,35 +11,38 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Wikipedia</title>
 </head>
 <body>
-    <div id="app">
-        {{hello}}
-        <form>
+    <div class="container">
+
+        <div id="app">
+            {{hello}}
+            <form>
                 <input type="text" ref="my_input">
                 <button @click.prevent="getFormValues()">Search</button>
               </form>
-<!-- 
+              <!-- 
               <div v-for="(value, key, index) in object">
-                    {{ index }}. {{ key }}: {{ value }}
-                  </div> -->
+                  {{ index }}. {{ key }}: {{ value }}
+                </div> -->
+                
 
-
-              <!-- Json Result: {{ output }} -->
+                <!-- Json Result: {{ output }} -->
               <!-- Json Result: {{ json }}<h3>{{results}}</h3> -->
               <!-- <ul id="example-1">
                     <li v-for="result in results">
-                     <a v-bind:href="result.url"> {{ result.title }}</a>
+                        <a v-bind:href="result.url"> {{ result.title }}</a>
                     </li>
-                  </ul> -->
-              <ul id="example-1">
-                    <div v-for="result in results">
-                     <a v-bind:href="result.url"> <h2 class="article-title">{{ result.title }}</h2></a>
-                     <p class="snippet">{{ result.snippet }}</p>
+                </ul> -->
+               
+                    <div v-for="result in results" class="article">
+                        <a v-bind:href="result.url"> <h2 class="article-title">{{ result.title }}</h2></a>
+                        <p class="snippet">{{ result.snippet }}</p>
                     </div>
-                  </ul>
-    </div>
+            </div>
+        </div>
     <script src="script.js"></script>
 </body>
 </html>

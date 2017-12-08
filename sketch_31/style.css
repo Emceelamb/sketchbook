@@ -1,1 +1,15 @@
-later 
+.article{
+  width:43.3%;
+/*   overflow: auto; */
+  float:left;
+  height:300px;
+  padding:25px;
+  margin:5px;
+  background-color:antiquewhite;
+/*  outline: #4CAF50 solid 10px; */
+  border-radius: 25px
+  
+  
+
+    
+}
