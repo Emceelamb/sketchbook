@@ -16,7 +16,7 @@ var app = new Vue({
                 for(var i = 0; i < response.body.query.search.length;i++){
                     var article = {
                         title: response.body.query.search[i].title,
-                        snippet: response.body.query.search[i].snippet.replace(/<\/?[^>]+>/gi, ''),
+                        snippet: response.body.query.search[i].snippet.replace(/<\/?[^>]+>/gi, '').replace(/&quot;/g,'"'),
                         url: 'https://en.wikipedia.org/?curid='+response.body.query.search[i].pageid
                     }
                     searchRes.push(article);
