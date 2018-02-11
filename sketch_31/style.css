@@ -17,6 +17,7 @@
     background-color:rgba(233,233,233,0.75);
   border-radius:0px;
     transition: border-radius 1s ease;
+  
 
   border-style:solid;
   border-color:white;
@@ -56,6 +57,10 @@ a:hover{
   display:none;
 }
 
+.logo:hover{
+  opacity:1;
+}
+
 .logo{
   width:25%;
   display:block;
@@ -84,8 +89,9 @@ input{
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], select, textarea {
     height: 38px;
     padding: 6px 10px;
-    background-color: rgba(230,230,230,0.5);
+    background-color: rgba(230,230,230,0.2);
     border: 2px solid #333333;
+    opacity:0.4;
   
     border-radius: 25px;
     box-shadow: none;
@@ -95,7 +101,10 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
 
 input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,input[type=search]:focus,input[type=tel]:focus,input[type=text]:focus,input[type=url]:focus,select:focus,textarea:focus {
  border:1px solid #333333;
- outline:0
+ outline:0;
+   opacity:1;
+     
+  border-radius: 25px;
 }
 
 /* giphy */
