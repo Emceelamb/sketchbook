@@ -1,0 +1,67 @@
+<svg id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120.95 98.8">
+<defs>
+    <style>
+        .cls-1{
+            fill:white;
+            stroke:#000;
+            stroke-miterlimit:10;
+            transition:.8s;
+            }
+        #logo:hover .cls-1{
+            fill:black;
+            transition:.8s;
+            stroke:#fff;
+            stroke:unset;
+
+
+         }    
+        
+        #l {
+        stroke-dasharray:10;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 2s linear forwards infinite;
+        -o-animation: dash 2s linear forwards infinite;
+        -moz-animation: dash 2s linear forwards infinite;
+        animation: dash 2s linear forwards infinite;
+        }
+
+        #m {
+        stroke-dasharray:30;
+        stroke-dashoffset: 0;
+        -webkit-animation: dash 2s linear forwards infinite;
+        -o-animation: dash 2s linear forwards infinite;
+        -moz-animation: dash 2s linear forwards infinite;
+        animation: dash 2s linear forwards infinite;
+        }
+        
+        @-webkit-keyframes dash{
+        from { 
+            stroke-dashoffset:120;
+        }
+        to {
+            stroke-dashoffset:0;
+            }
+        }
+        @-moz-keyframe dash{
+        from { 
+            stroke-dashoffset:800;
+        }
+        to {
+            stroke-dashoffset:0;
+            }
+        }
+        
+        #logo.clickit .cls-1{
+            fill:red;
+        }
+   
+    </style>
+
+    <script type="text/javascript">
+        var clicker = document.querySelector("#logo");
+        clicker.addEventListener('click', function(){
+        this.classList.toggle("clickit");
+        });
+    </script>
+</defs>
+<title>ml_logo</title><path id ="l" class="cls-1" d="M95.07,22.51a18.38,18.38,0,0,1,10.09,2.9,15.87,15.87,0,0,1,3.27,3V-.2H83V11.69H95.07Z" transform="translate(0.21 0.7)"/><path class="cls-1" id="m" d="M108.36,85.72V52q0-8.72-1.48-13.18a14.29,14.29,0,0,0-5.73-7.38,18.81,18.81,0,0,0-10.86-2.92q-11.46,0-24.75,10.62Q61.12,28.49,49.47,28.49T25.82,38.12V29.54H1.14V41.43H12.46v44.3H.29V97.61H37.77V85.72h-12V49.23q11.92-8.79,19.5-8.79,4.63,0,6.56,3T53.8,53.1V97.61H67l.16-48.37q10.9-8.79,19.48-8.79A8.47,8.47,0,0,1,91.8,42a6.62,6.62,0,0,1,2.67,4A44.83,44.83,0,0,1,95,54.36V97.61h25.24V85.72Z" transform="translate(0.21 0.7)"/></svg>
