@@ -42,7 +42,7 @@
             stroke-dashoffset:0;
             }
         }
-        @-moz-keyframe dash{
+        @-moz-keyframes dash{
         from { 
             stroke-dashoffset:800;
         }
