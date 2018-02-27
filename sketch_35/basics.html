@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <title>VUE TUTORIAL</title>
+
+    <style>
+        .container {
+            padding: 70px;
+            font-size: 24px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Hello world example -->
+        <div id="sup">
+            {{ sup }}
+        </div>
+        
+        <!-- List  -->
+        <p>list: </p>
+        <div id="list"></div>
+        
+        <!-- v-For List -->
+        <div id="listApp">
+            <div id="vForList">
+                {{title}}
+                <ul>
+                    <li v-for="item in list">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Model -->
+        <div id="model">
+            <h3>Type somethin:</h3>
+            <textarea v-model="msg" class="msg" rows="5" maxlength=72></textarea>
+            <p class = "msgText">{{ msg }}</p>
+        </div>
+    </div>
+    <script src="basics.js"></script>    
+</body>
+</html>

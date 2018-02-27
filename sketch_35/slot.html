@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    
+    <title>Slot</title>
+</head>
+<body>
+    <div id="slot">
+        <h2> this is a slot</h2>
+        <app-child>
+            <p>this is slot 1</p>
+        </app-child>
+        <app-child>
+            <p>this is slot 2</p>
+        </app-child>
+    </div>
+
+    <script type ="text/x-template" id="childarea">
+        <div class="child">
+            <slot>HELLLOOO</slot>
+            <p> child slot </p>
+        </div>
+    </script>
+    <script src="slot.js"></script>
+</body>
+</html>
