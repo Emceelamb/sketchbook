@@ -18,7 +18,7 @@ Vue.component('child', {
             required: true
         }
     },
-    template: `<div> {{ count }} </div><div>{{ count }}</div>`
+    template: `<div> {{ count }} </div>`
 })
 
 const app = new Vue({
@@ -37,4 +37,18 @@ const app = new Vue({
             this.count--;
         }
     }
+});
+
+Vue.component('chi', {
+    props: {
+        count: {
+            type: Number, 
+            required: true
+        },
+        text: {
+            type: String,
+            required: true
+        }
+    },
+    template: `<div> {{ count }} </div>`
 })
