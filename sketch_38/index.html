@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script> -->
+    
+    
+    <title>Lettering.js Template</title>
+    
+    <style>
+    
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker|Plaster');
+    .container{
+        height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+    }
+
+    .hero{
+        position:fixed;
+    }
+    #header{
+        text-align: center;
+        vertical-align: middle;
+        margin:auto;
+        color:#f7996e;
+        /* font-family: 'Permanent Marker', cursive; */
+        
+        font-family: 'Plaster', cursive;
+    
+        font-size:120px;
+
+        
+    }
+    
+    #header .char1,
+    #header .char3,
+    #header .char5,
+    #header .char7,
+    #header .char9,
+    #header .char11,
+    #header .char13,
+    #header .char15 {
+        color:#dd7756;
+        }
+    
+    #header .char1,
+    #header .char2,
+    #header .char3,
+    #header .char4, 
+    #header .char5,
+    #header .char6, 
+    #header .char7,
+    #header .char8, 
+    #header .char9 {
+     display: inline-block;
+    }
+    
+    #header .char5{
+        padding-left:50px;
+    }
+
+    .spin {
+        transition: 0.20s;
+        animation: spin 1s linear;
+
+    }
+    #header .char1:hover,
+    #header .char2:hover,
+    #header .char3:hover,
+    #header .char4:hover, 
+    #header .char5:hover,
+    #header .char6:hover, 
+    #header .char7:hover,
+    #header .char8:hover, 
+    #header .char9:hover {
+        transition: 0.20s;
+        animation: spin 1s linear infinite;
+
+
+    }
+ 
+ 
+    @keyframes spin { 
+        0% { -webkit-transform: rotaY(0deg); transform:rotateY(0deg); } 
+        100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
+    body{
+        /* background:rgb(33,33,33); */
+    }
+
+    .hero{
+        /* background: rgba(230,230,230,);; */
+        padding:80px;
+        z-index:0;
+    }
+
+    .text{
+        z-index: 1;
+        /* background-color:rgba(255,255,255,0.5);
+        padding:200px; */
+        
+    }
+    .info{
+        color:rgba(33,33,33,0.75);
+        font-family: 'Open Sans', sans-serif;
+        text-transform:uppercase;
+        font-size:18px;
+        letter-spacing: 1.5em;
+        animation-name: spacing;        
+        animation-duration: 4s;
+    }
+
+    @keyframes spacing {
+    0% {letter-spacing: 0em;}
+    75% {letter-spacing: 2em;}
+    100% {letter-spacing: 1.5em;}
+}
+
+
+    </style>
+</head>
+<body>
+  
+
+  <div class="container">
+      <div class="hero">
+          <h1 id="header">MARK LAM</h1>
+        </div>
+        <div class="text">
+            <p class="info">A digital maker</p>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
