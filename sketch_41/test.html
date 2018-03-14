@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<div></div>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+   
+    <title>Document</title>
+
+    <style>
+    h1 { 
+        display:inline-block;
+    }
+    span {
+        display:inline-block;
+    }
+    .container {
+        width:200px;
+        margin:auto;
+        padding-top:200px;
+    }
+    </style>
+</head>
+<body>
+        <div class="container">
+                <div>
+                    <h1>SPIN</h1>
+                </div>
+            </div>
+        <script>
+        $(document).ready(function() {
+            $("h1").lettering();
+            
+  // the same as yours.
+  function rotateOnMouse(e, pw) {
+      
+      var offset = pw.offset();
+      var center_x = (offset.left) + ($(pw).width() / 2);
+      var center_y = (offset.top) + ($(pw).height() / 2);
+      var mouse_x = e.pageX;
+      var mouse_y = e.pageY;
+      var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+      var degree = (radians * (180 / Math.PI) * -1) + 100;
+      //            window.console.log("de="+degree+","+radians);
+      $(pw).css('-moz-transform', 'rotate(' + degree + 'deg)');
+      $(pw).css('-webkit-transform', 'rotate(' + degree + 'deg)');
+      $(pw).css('-o-transform', 'rotate(' + degree + 'deg)');
+      $(pw).css('-ms-transform', 'rotate(' + degree + 'deg)');
+  }
+
+  $('.container div').mousemove(function(e) {
+    e.preventDefault(); // prevents the dragging of the image.
+    $(document).bind('mousemove', function(e2) {
+      rotateOnMouse(e2, $('.char1'));
+      rotateOnMouse(e2, $('.char2'));
+      rotateOnMouse(e2, $('.char3'));
+      rotateOnMouse(e2, $('.char4'));
+    });
+  });
+
+});</script>
+        </body>
+</html>
