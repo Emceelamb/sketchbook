@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Splitting with Jquery</title>
+
+    <style>
+        .container{
+            width:200px;
+            margin:auto;
+            padding-top:200px;
+        }
+        .split{
+            font-size:48px;
+            top:0;
+            position:relative;
+        }
+
+        
+        
+        .split:hover{
+            /* font-size:52px; */
+            top:5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="textsplit">HELLO WORLD!</div>
+    </div>
+
+
+    <script>
+    jQuery(function($){
+    $('.textsplit').html(function (i, html) {
+    	let letters = html.split("");
+      console.log(letters);
+
+      letters.forEach(function(letter,i){
+        letters[i] = '<span class="split">'+letter+'</div>';
+      });
+            console.log(letters);
+
+      $(".textsplit").html(letters);
+    })
+})</script>
+    
+</body>
+</html>
