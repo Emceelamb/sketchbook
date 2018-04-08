@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Sup bro</title>
+
+    <style>
+        .container{
+            width:200px;
+            margin:auto;
+            padding-top:200px;
+        }
+        .split{
+            font-size:48px;
+            top:0;
+            position:relative;
+        }
+
+        
+        
+        .split:hover{
+            /* font-size:52px; */
+            top:5px;
+        }
+
+        .row div{
+            background-color:#69beeb;
+            height:5px;
+            width:2px;
+            margin: 2px;
+            display:inline-block;
+        }
+
+        .row div.active{
+            background-color: black;
+        }
+        . row div.inactive{
+            background-color: #69beeb;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="row"></div>
+    <script>
+        function randomBin(){
+            let max = 1;
+            let min = 0;
+            return Math.floor(Math.random() * (max-min +1))
+        }
+            console.log(randomBin());
+        for(let i = 0; i <101; i++){
+            let div = document.createElement('div');
+            div.classList.add(randomBin() ? 'active' : 'inactive');
+            document.querySelector('.row').appendChild(div);
+        }
+    </script>
+    
+</body>
+</html>
+        <!-- $('body').append($('<div>', {style: 'background-color:green; height:200px; margin:0'}));         -->
