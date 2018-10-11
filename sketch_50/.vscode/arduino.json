@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "pot/pot.ino",
+    "port": "/dev/ttyACM0"
+}

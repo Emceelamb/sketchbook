@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.js"></script>
+  <script src="model_pca_20_svm.js"></script>
+  <script src="clmtrackr.js"></script>  
+</head>
+<body>
+  <script>
+  let val = 5;
+  let positions;
+  let moustache;
+  
+  function setup(){
+    // set up cam
+    let videoInput = createCapture();
+    videoInput.size(400, 300);
+    videoInput.position(0,0);
+
+    // setup canvas
+    let cnv = createCanvas(400,400);
+    cnv.position(0,0);
+
+    // setup trackr
+    ctrackr = new clm.tracker();
+    ctrackr.init(pModel);
+    ctrackr.start(videoInput.elt);
+    fill(33);
+
+    // load moustache
+    moustache = loadImage("data/moustache_4.png");  
+  }
+  function draw(){
+    clear();
+
+    positions = ctrackr.getCurrentPosition();
+    // console.log(positions[37][0]);
+    for(var i = 0; i<positions.length;i++){
+      fill(233);
+      // ellipse(positions[37][0], positions[37][1], 100, 20);
+      let mWidth=dist(positions[2][0],positions[12][0],positions[2][1],positions[12][1]);
+      let mHeight = dist(positions[37][0],positions[47][0],positions[37][1],positions[47][1]);
+      image(moustache, positions[37][0]-mWidth/2, positions[37][1], mWidth, mHeight);
+    }
+    // fill(255,0,0);
+    // ellipse(positions[37][0],positions[37][1], 30,30);
+
+  }
+
+  </script>
+</body>
+</html>
