@@ -1,5 +1,7 @@
 #include <ESP8266WiFi.h>
- 
+#include <Servo.h>
+
+Servo servo; 
 // void setup(){
  
 //    Serial.begin(9600);
@@ -27,7 +29,7 @@ const char* password = "NYU+s0a!+P?";
  
 int ledPin = 13; // GPIO13
 WiFiServer server(80);
- 
+ int servoPos=90;
 void setup() {
   Serial.begin(9600);
   delay(10);
@@ -59,15 +61,22 @@ void setup() {
   Serial.print("http://");
   Serial.print(WiFi.localIP());
   Serial.println("/");
+  
+  servo.attach(2); //D4
+
+  servo.write(servoPos);
+
+  delay(2000);
+
  
 }
  
 void loop() {
   // Check if a client has connected
-  //   Serial.print("Use this URL to connect: ");
-  // Serial.print("http://");
-  // Serial.print(WiFi.localIP());
-  // Serial.println("/");
+    Serial.print("Use this URL to connect: ");
+  Serial.print("http://");
+  Serial.print(WiFi.localIP());
+  Serial.println("/");
   WiFiClient client = server.available();
   if (!client) {
     return;
@@ -95,6 +104,18 @@ void loop() {
     digitalWrite(ledPin, LOW);
     value = LOW;
   }
+
+    if (request.indexOf("/SERVO=UP") != -1)  {
+    servoPos += 10;  
+    servo.write(servoPos);
+ 
+  }
+
+      if (request.indexOf("/SERVO=DOWN") != -1)  {
+    servoPos -= 10;  
+    servo.write(servoPos);
+ 
+  }
  
 // Set ledPin according to the request
 //digitalWrite(ledPin, value);
@@ -116,6 +137,11 @@ void loop() {
   client.println("<br><br>");
   client.println("<a href=\"/LED=ON\"\"><button>Turn On </button></a>");
   client.println("<a href=\"/LED=OFF\"\"><button>Turn Off </button></a><br />");  
+
+
+  client.println("<a href=\"/SERVO=UP\"\"><button>Servo UP </button></a>");
+  client.println("<a href=\"/SERVO=DOWN\"\"><button>Servo DOWN </button></a><br />");  
+
   client.println("</html>");
  
   delay(1);
