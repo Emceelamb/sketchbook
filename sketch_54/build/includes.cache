@@ -1,0 +1,97 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/cores/esp8266"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/variants/nodemcu"
+  },
+  {
+    "Sourcefile": "/home/mark/code/sketch/sketchbook/sketch_54/build/sketch/sketch_54.ino.cpp",
+    "Include": "ESP8266WiFi.h",
+    "Includepath": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src"
+  },
+  {
+    "Sourcefile": "/home/mark/code/sketch/sketchbook/sketch_54/build/sketch/sketch_54.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/BearSSLHelpers.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/CertStoreBearSSL.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/ESP8266WiFi.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/ESP8266WiFiAP.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/ESP8266WiFiGeneric.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/ESP8266WiFiMulti.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/ESP8266WiFiSTA.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/ESP8266WiFiScan.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiClient.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiClientSecureAxTLS.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiClientSecureBearSSL.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiServer.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiServerSecureAxTLS.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiServerSecureBearSSL.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/home/mark/.arduino15/packages/esp8266/hardware/esp8266/2.4.2/libraries/ESP8266WiFi/src/WiFiUdp.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]

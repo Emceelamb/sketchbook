@@ -30,13 +30,36 @@ const char* password = "NYU+s0a!+P?";
 int ledPin = 13; // GPIO13
 WiFiServer server(80);
  int servoPos=90;
+
+
+/* SOMETHING */
+// sets led pins
+const int RED = 12;
+const int GRE = 13;
+const int WHI = 15;
+
+// sets blink time
+const int hightTime = 100;
+const int lowTime = 100;
+
+
+// set wifi indicator
+int wifiStatus;
+int connectSuccess = 0;
+
+// nothing
+
+
 void setup() {
   Serial.begin(9600);
   delay(10);
  
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
- 
+   pinMode(RED, OUTPUT);
+    pinMode(GRE, OUTPUT);
+    pinMode(WHI, OUTPUT);
+
   // Connect to WiFi network
   Serial.println();
   Serial.println();
@@ -73,10 +96,10 @@ void setup() {
  
 void loop() {
   // Check if a client has connected
-    Serial.print("Use this URL to connect: ");
-  Serial.print("http://");
-  Serial.print(WiFi.localIP());
-  Serial.println("/");
+  //   Serial.print("Use this URL to connect: ");
+  // Serial.print("http://");
+  // Serial.print(WiFi.localIP());
+  // Serial.println("/");
   WiFiClient client = server.available();
   if (!client) {
     return;
@@ -148,4 +171,47 @@ void loop() {
   Serial.println("Client disonnected");
   Serial.println("");
  
+ // loop end
+  wifiStatus = WiFi.status();
+    if(connectSuccess==0){
+        // if never connected blink white.
+        white();
+        Serial.println("Hold your horses! I'm still connecting!!!");
+    }
+    if(connectSuccess == WL_CONNECTED){
+        // if connected blink green
+        green();
+        connectSuccess ++;
+        Serial.println("I'm connected!!!");
+    } 
+    else if(connectSuccess!=0){
+        // if connect lost blink red
+        red();        
+        Serial.println("Womp Womp. I'm lost\nI was found");
+    } 
+
+    delay(10000);    
+
+}
+
+
+void red(){
+    digitalWrite(RED, HIGH), delay(hightTime), digitalWrite(RED, LOW), delay(lowTime);
+}
+
+
+void green(){
+    digitalWrite(GRE, HIGH), delay(hightTime), digitalWrite(GRE, LOW), delay(lowTime);
+}
+
+void white(){
+    digitalWrite(WHI, HIGH), delay(hightTime), digitalWrite(WHI, LOW), delay(lowTime);
+}
+
+
+void blinkCycle(){
+    red();
+    green();
+    white();
+    delay(100);
 }
